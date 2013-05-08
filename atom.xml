@@ -4,7 +4,7 @@
   <title><![CDATA[EasyOpenStack Blog]]></title>
   <link href="http://easyopenstack.github.io/atom.xml" rel="self"/>
   <link href="http://easyopenstack.github.io/"/>
-  <updated>2013-05-08T21:28:24+08:00</updated>
+  <updated>2013-05-08T21:37:03+08:00</updated>
   <id>http://easyopenstack.github.io/</id>
   <author>
     <name><![CDATA[EasyOpenStack]]></name>
@@ -18,7 +18,22 @@
     <link href="http://easyopenstack.github.io/blog/2013/05/08/all-in-one/"/>
     <updated>2013-05-08T20:25:00+08:00</updated>
     <id>http://easyopenstack.github.io/blog/2013/05/08/all-in-one</id>
-    <content type="html"><![CDATA[<h2>OpenStack的部署</h2>
+    <content type="html"><![CDATA[<h2>环境</h2>
+
+<pre><code>硬件:
+    *　CPU支持VT
+    *　第二个网卡可以上外网
+软件:
+    OS: CentOS 6.3
+        *　最小化安装
+        *　仅系统默认RPM源
+    OpenStack:
+        *　网络模式:FlatDHCP
+    虚拟化::
+        *　KVM
+</code></pre>
+
+<h2>OpenStack的部署</h2>
 
 <p>执行该命令:</p>
 

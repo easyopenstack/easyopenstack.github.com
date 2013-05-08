@@ -9,9 +9,8 @@
   <meta name="author" content="EasyOpenStack">
 
   
-  <meta name="description" content="OpenStack的部署 执行该命令: curl http://mirrors.easyopenstack.org/files/allinone.sh | bash * 该脚本做如下工作:
-* 安装chef客户端并向chef server注册
-* 向服务端请求: * &hellip;">
+  <meta name="description" content="环境 硬件: *　CPU支持VT *　第二个网卡可以上外网
+软件: OS: CentOS 6.3 *　最小化安装 *　仅系统默认RPM源 OpenStack: *　网络模式:FlatDHCP 虚拟化:: *　KVM OpenStack的部署 执行该命令: curl http://mirrors. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,7 +97,22 @@
   </header>
 
 
-  <div class="entry-content"><h2>OpenStack的部署</h2>
+  <div class="entry-content"><h2>环境</h2>
+
+<pre><code>硬件:
+    *　CPU支持VT
+    *　第二个网卡可以上外网
+软件:
+    OS: CentOS 6.3
+        *　最小化安装
+        *　仅系统默认RPM源
+    OpenStack:
+        *　网络模式:FlatDHCP
+    虚拟化::
+        *　KVM
+</code></pre>
+
+<h2>OpenStack的部署</h2>
 
 <p>执行该命令:</p>
 
