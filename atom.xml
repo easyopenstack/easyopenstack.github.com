@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[EasyOpenStack Blog]]></title>
+  <link href="http://easyopenstack.github./atom.xml" rel="self"/>
+  <link href="http://easyopenstack.github./"/>
+  <updated>2013-05-08T21:10:38+08:00</updated>
+  <id>http://easyopenstack.github./</id>
+  <author>
+    <name><![CDATA[EasyOpenStack]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[All in one]]></title>
+    <link href="http://easyopenstack.github./blog/2013/05/08/all-in-one/"/>
+    <updated>2013-05-08T20:25:00+08:00</updated>
+    <id>http://easyopenstack.github./blog/2013/05/08/all-in-one</id>
+    <content type="html"><![CDATA[<h2>OpenStack的部署</h2>
+
+<p>执行该命令:</p>
+
+<pre>
+curl http://mirrors.easyopenstack.org/files/allinone.sh | bash
+</pre>
+
+
+<pre><code>* 该脚本做如下工作:
+* 安装chef客户端并向chef server注册
+* 向服务端请求:
+    * 为改服务器生产environment(OpenStack相关变量)
+    * 为该服务器添加相应的role
+* 开启chef client服务后台执行
+
+chef 客户端执行后回开始openstack的部署,部署时间视网络情况而定
+
+若不愿等待,则直接运行如下命令:
+
+    chef-client
+
+若安装过程中出现网络引起的中断,重复执行chef-client即可
+</code></pre>
+
+<p>当部署完成后,既可通过管理员账户从浏览器访问OpenStack的dashboard(账户密码在/root/.novarc中)</p>
+
+<h2>镜像上传</h2>
+
+<p>可从 <a href="http://images.easyopenstack.org">http://images.easyopenstack.org</a> 下载镜像
+按如下方式上传:</p>
+
+<pre><code>wget http://images.easyopenstack.org/linux/L-CentOS-6.3-x64.img
+source ~/.novarc
+glance add name=L-CentOS-6.3-x64.img \
+         is_public=true \
+         container_format=ovf \
+         disk_format=qcow2   &lt; L-CentOS-6.3-x64.img
+</code></pre>
+
+<p>上传后即可以从管理平台启动云主机</p>
+
+<h3>关于镜像</h3>
+
+<pre>
+1:去掉镜像系统的调度方式
+2:加了个启动脚本,为获取到的IP生成网络配置文件
+        FaltDHCP网络模式是,在instanceIP到期,重新获取IP的期间有可能造成网络闪断
+</pre>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>
