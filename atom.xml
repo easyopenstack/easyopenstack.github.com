@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[EasyOpenStack Blog]]></title>
-  <link href="http://easyopenstack.github./atom.xml" rel="self"/>
-  <link href="http://easyopenstack.github./"/>
-  <updated>2013-05-08T21:10:38+08:00</updated>
-  <id>http://easyopenstack.github./</id>
+  <link href="http://easyopenstack.github.io/atom.xml" rel="self"/>
+  <link href="http://easyopenstack.github.io/"/>
+  <updated>2013-05-08T21:28:24+08:00</updated>
+  <id>http://easyopenstack.github.io/</id>
   <author>
     <name><![CDATA[EasyOpenStack]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[All in one]]></title>
-    <link href="http://easyopenstack.github./blog/2013/05/08/all-in-one/"/>
+    <link href="http://easyopenstack.github.io/blog/2013/05/08/all-in-one/"/>
     <updated>2013-05-08T20:25:00+08:00</updated>
-    <id>http://easyopenstack.github./blog/2013/05/08/all-in-one</id>
+    <id>http://easyopenstack.github.io/blog/2013/05/08/all-in-one</id>
     <content type="html"><![CDATA[<h2>OpenStack的部署</h2>
 
 <p>执行该命令:</p>
@@ -40,7 +40,7 @@ chef 客户端执行后回开始openstack的部署,部署时间视网络情况�
 
     chef-client
 
-若安装过程中出现网络引起的中断,重复执行chef-client即可
+若安装过程中出现网络引起的中断,重复执行chef-client即可 
 </code></pre>
 
 <p>当部署完成后,既可通过管理员账户从浏览器访问OpenStack的dashboard(账户密码在/root/.novarc中)</p>
