@@ -134,7 +134,13 @@ chef 客户端执行后回开始openstack的部署,部署时间视网络情况�
 
     chef-client
 
-若安装过程中出现网络引起的中断,重复执行chef-client即可 
+若安装过程中出现错误,重复执行chef-client即可 
+
+执行chef-client时如出现如下提示:
+
+    INFO: Chef client  is running, will wait for it to finish and then run
+
+则说明chef-client已在后台运行
 </code></pre>
 
 <p>当部署完成后,既可通过管理员账户从浏览器访问OpenStack的dashboard(账户密码在/root/.novarc中)</p>
